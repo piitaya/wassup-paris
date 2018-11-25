@@ -6,7 +6,10 @@ import media from "styled-media-query";
 const SectionIntro = ({ image }) => {
   return (
     <Section>
-      <BackgroundImage fluid={image.src.childImageSharp.fluid} alt={image.alt} />
+      <BackgroundImage
+        fluid={image.src.childImageSharp.fluid}
+        alt={image.alt}
+      />
     </Section>
   );
 };

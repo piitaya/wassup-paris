@@ -30,7 +30,6 @@ const SectionProducts = ({ data, titleImage }) => (
 );
 
 export default props => {
-  console.log(props);
   return (
     <StaticQuery
       query={graphql`

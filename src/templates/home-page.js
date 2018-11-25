@@ -5,7 +5,8 @@ import Layout from "../components/Layout";
 import SectionIntro from "../components/sections/Intro";
 import SectionProducts from "../components/sections/Products";
 
-export const HomePageTemplate = ({ title, description, intro, products }) => (
+export const HomePageTemplate = ({ title, description, intro, products }) => {
+  return (
   <>
     <section>
       <h1>{title}</h1>
@@ -14,12 +15,11 @@ export const HomePageTemplate = ({ title, description, intro, products }) => (
     <SectionIntro {...intro} />
     <SectionProducts {...products} />
   </>
-);
+)};
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
-  console.log(frontmatter);
   return (
     <Layout>
       <HomePageTemplate

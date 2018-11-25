@@ -4,10 +4,13 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-
+  
 collections:
   - name: "pages"
     label: "Pages"
+    delete: false
+    editor:
+      preview: false
     files:
       - file: "src/pages/index.md"
         label: "Home Page"
