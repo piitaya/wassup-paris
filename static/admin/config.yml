@@ -18,11 +18,17 @@ collections:
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'home-page' }
           - { label: 'Title', name: 'title', 'widget': string }
-          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Description', name: 'description', widget: 'string' }
           - label: 'Intro'
             name: 'intro'
             widget: 'object'
             fields:
+              - { label: 'Image', name: 'image', widget: 'object', fields: [{ label: 'Image', name: 'src', widget: 'image' }, { label: 'Alt', name: 'alt', widget: 'string' }] }
+          - label: 'View More'
+            name: 'viewmore'
+            widget: 'object'
+            fields:
+              - { label: "Text", name: 'text', widget: 'string' }
               - { label: 'Image', name: 'image', widget: 'object', fields: [{ label: 'Image', name: 'src', widget: 'image' }, { label: 'Alt', name: 'alt', widget: 'string' }] }
           - label: 'Savoir-Faire'
             name: 'savoirfaire'

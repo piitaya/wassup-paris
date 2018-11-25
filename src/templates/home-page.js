@@ -5,30 +5,33 @@ import Layout from "../components/Layout";
 import SectionIntro from "../components/sections/Intro";
 import SectionProducts from "../components/sections/Products";
 import SectionSavoirFaire from "../components/sections/SavoirFaire";
+import SectionViewMore from "../components/sections/ViewMore";
 
-export const HomePageTemplate = ({ title, description, intro, products, savoirfaire }) => {
+export const HomePageTemplate = ({
+  intro,
+  products,
+  viewmore,
+  savoirfaire
+}) => {
   return (
-  <>
-    <section>
-      <h1>{title}</h1>
-      <h2>{description}</h2>
-    </section>
-    <SectionIntro {...intro} />
-    <SectionProducts {...products} />
-    <SectionSavoirFaire {...savoirfaire} />
-  </>
-)};
+    <>
+      <SectionIntro {...intro} />
+      <SectionProducts {...products} />
+      <SectionViewMore {...viewmore} />
+      <SectionSavoirFaire {...savoirfaire} />
+    </>
+  );
+};
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout title={frontmatter.title} description={frontmatter.description}>
       <HomePageTemplate
-        title={frontmatter.title}
-        description={frontmatter.description}
         intro={frontmatter.intro}
         products={frontmatter.products}
+        viewmore={frontmatter.viewmore}
         savoirfaire={frontmatter.savoirfaire}
       />
     </Layout>
@@ -52,6 +55,19 @@ export const homerPageQuery = graphql`
         title
         description
         intro {
+          image {
+            alt
+            src {
+              childImageSharp {
+                fluid(maxWidth: 2048) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        viewmore {
+          text,
           image {
             alt
             src {

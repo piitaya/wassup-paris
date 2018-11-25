@@ -50,10 +50,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ title, description, children }) => (
   <div>
     <GlobalStyle />
-    <Helmet title="Wassup PARIS" />
+    <Helmet  htmlAttributes={{lang: "fr"}}>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+    </Helmet>
     <Navbar />
     {children}
   </div>

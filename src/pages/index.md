@@ -7,6 +7,11 @@ intro:
   image:
     alt: Intro image
     src: /img/intro.jpg
+viewmore:
+  text: Voir plus de Wassup sur Etsy
+  image:
+    alt: View More
+    src: /img/view_more_wassups.jpg
 savoirfaire:
   blocks:
     - title: Made in France
