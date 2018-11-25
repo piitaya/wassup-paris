@@ -4,5 +4,7 @@ title: Wassup Paris
 description: >-
   Wassup Paris Description
 intro:
-  image: /img/intro.jpg
+  image: 
+    alt: "Intro image"
+    src: /img/intro.jpg
 ---

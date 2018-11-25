@@ -50,9 +50,12 @@ export const homerPageQuery = graphql`
         description
         intro {
           image {
-            childImageSharp {
-              fluid(maxWidth: 2048) {
-                ...GatsbyImageSharpFluid
+            alt
+            src {
+              childImageSharp {
+                fluid(maxWidth: 2048) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
