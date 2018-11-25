@@ -4,8 +4,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SectionIntro from "../components/sections/Intro";
 import SectionProducts from "../components/sections/Products";
+import SectionSavoirFaire from "../components/sections/SavoirFaire";
 
-export const HomePageTemplate = ({ title, description, intro, products }) => {
+export const HomePageTemplate = ({ title, description, intro, products, savoirfaire }) => {
   return (
   <>
     <section>
@@ -14,6 +15,7 @@ export const HomePageTemplate = ({ title, description, intro, products }) => {
     </section>
     <SectionIntro {...intro} />
     <SectionProducts {...products} />
+    <SectionSavoirFaire {...savoirfaire} />
   </>
 )};
 
@@ -27,6 +29,7 @@ const HomePage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
         products={frontmatter.products}
+        savoirfaire={frontmatter.savoirfaire}
       />
     </Layout>
   );
@@ -55,6 +58,22 @@ export const homerPageQuery = graphql`
               childImageSharp {
                 fluid(maxWidth: 2048) {
                   ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        savoirfaire {
+          blocks {
+            title
+            text
+            image {
+              alt
+              src {
+                childImageSharp {
+                  fluid(maxWidth: 2048) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }

@@ -30,18 +30,18 @@ class Navbar extends PureComponent {
       <NavWrapper>
         <Burger>
           <ButtonIcon onClick={this.handleBurgerClick}>
-            <img src={isOpen ? cross : burger} />
+            <img src={isOpen ? cross : burger} alt="" />
           </ButtonIcon>
         </Burger>
         <Links>
-          <a href="">Produits</a>
-          <a href="">Savoir-Faire</a>
-          <a href="">Contact</a>
+          <a href="#producrs">Produits</a>
+          <a href="#savoir-faire">Savoir-Faire</a>
+          <a href="#contact">Contact</a>
         </Links>
         <WassupLogo />
         <Actions>
           <ButtonIcon as="a" href="https://www.instagram.com/wassup_paris/">
-            <img src={instagram} />
+            <img src={instagram} alt=""/>
           </ButtonIcon>
           <Button
             as="a"
@@ -54,9 +54,9 @@ class Navbar extends PureComponent {
         </Actions>
         <MobileMenu isOpen={isOpen}>
           <a href="https://www.etsy.com/shop/WassupParisStore?ref=website">Shop on Etsy</a>
-          <a href="">Produits</a>
-          <a href="">Savoir-Faire</a>
-          <a href="">Contact</a>
+          <a href="#products">Produits</a>
+          <a href="#savoir-faire">Savoir-Faire</a>
+          <a href="#contact">Contact</a>
           <a href="https://www.instagram.com/wassup_paris/">Instagram</a>
         </MobileMenu>
       </NavWrapper>

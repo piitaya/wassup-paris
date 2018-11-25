@@ -7,8 +7,6 @@ import { createGlobalStyle } from "styled-components";
 import futuraStd from "../fonts/FuturaStd-Medium.otf";
 import futuraStdBold from "../fonts/FuturaStd-Bold.otf";
 
-console.log(futuraStd);
-
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'FuturaStd';

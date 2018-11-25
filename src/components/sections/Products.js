@@ -1,31 +1,34 @@
 import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { media } from "../../Constants";
+import Container from "../elements/Container";
 import InstagramTile from "../elements/InstagramTile";
 import ProductTile from "../elements/ProductTile";
 
 import titleSvg from "../../img/texts/product-fr.svg";
 
-const SectionProducts = ({ data, titleImage }) => (
+const SectionProducts = ({ data }) => (
   <Section>
-    <Title src={titleSvg} />
-    <Row>
-      {data.allEtsyListing.edges.map(({ node }) => (
-        <Col key={node.id}>
-          <ProductTile
-            title={node.title.split(" - ")[0]}
-            url={node.url}
-            price={node.price.split(".")[0]}
-            image={node.localImage}
-          />
+    <Container>
+      <Title src={titleSvg} />
+      <Row>
+        {data.allEtsyListing.edges.map(({ node }) => (
+          <Col key={node.id}>
+            <ProductTile
+              title={node.title.split(" - ")[0]}
+              url={node.url}
+              price={node.price.split(".")[0]}
+              image={node.localImage}
+            />
+          </Col>
+        ))}
+        <Col hideOnMobile>
+          <InstagramTile />
         </Col>
-      ))}
-      <Col>
-        <InstagramTile />
-      </Col>
-    </Row>
+      </Row>
+    </Container>
   </Section>
 );
 
@@ -34,7 +37,7 @@ export default props => {
     <StaticQuery
       query={graphql`
         query {
-          allEtsyListing(limit: 9, sort: { fields: [creation_tsz] }) {
+          allEtsyListing(limit: 8, sort: { fields: [creation_tsz] }) {
             totalCount
             edges {
               node {
@@ -60,17 +63,9 @@ export default props => {
   );
 };
 
-const Section = styled.div`
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+const Section = styled.section``;
 
 const Row = styled.div`
-  width: 100%;
-  max-width: 1280px;
-  margin: auto;
   margin: -7px;
   position: relative;
   display: flex;
@@ -91,6 +86,14 @@ const Col = styled.div`
   ${media.greaterThan("desktop")`
     padding: 25px;
   `};
+
+  ${props =>
+    props.hideOnMobile &&
+    css`
+      ${media.lessThan("tablet")`
+      display: none;
+    `}
+    `}
 `;
 
 const Title = styled.img`

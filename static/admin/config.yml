@@ -1,44 +1,38 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: 'git-gateway'
+  branch: 'master'
 
-media_folder: static/img
-public_folder: /img
-  
+media_folder: 'static/img'
+public_folder: '/img'
+
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     delete: false
     editor:
       preview: false
     files:
-      - file: "src/pages/index.md"
-        label: "Home Page"
-        name: "home"
+      - file: 'src/pages/index.md'
+        label: 'Home Page'
+        name: 'home'
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "home-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  {
-                    label: Image,
-                    name: image,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: src, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'home-page' }
+          - { label: 'Title', name: 'title', 'widget': string }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - label: 'Intro'
+            name: 'intro'
+            widget: 'object'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'object', fields: [{ label: 'Image', name: 'src', widget: 'image' }, { label: 'Alt', name: 'alt', widget: 'string' }] }
+          - label: 'Savoir-Faire'
+            name: 'savoirfaire'
+            widget: 'object'
+            fields: 
+              - label: 'Blocks'
+                name: 'blocks'
+                widget: 'list'
+                fields: 
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - { label: 'Text', name: 'text', widget: 'string' }
+                  - { label: 'Image', name: 'image', widget: 'object', fields: [{ label: 'Image', name: 'src', widget: 'image' }, { label: 'Alt', name: 'alt', widget: 'string' }] }
+                  

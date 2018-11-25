@@ -6,9 +6,9 @@ import React from "react";
 
 const ProductTile = ({ title, image, price, url }) => {
   return (
-    <ProductWrapper>
+    <Tile>
       <ImgLink href={url}>
-        <ProductImg fluid={image.childImageSharp.fluid} />
+        <ProductImg fluid={image.childImageSharp.fluid} alt={title}/>
       </ImgLink>
       <Title>
         <p>{title}</p>
@@ -19,13 +19,13 @@ const ProductTile = ({ title, image, price, url }) => {
       <Button as="a" orange href={url}>
         Shop on Esty
       </Button>
-    </ProductWrapper>
+    </Tile>
   );
 };
 
 export default ProductTile;
 
-const ProductWrapper = styled.div`
+const Tile = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;

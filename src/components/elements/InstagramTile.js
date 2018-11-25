@@ -1,25 +1,23 @@
 import styled from "styled-components";
-import Img from "gatsby-image";
-import Button from "./Button";
-import { color, media } from "../../Constants";
+import { color } from "../../Constants";
 import React from "react";
 
 import instagramLogo from "../../img/icons/instagram.svg";
 
 const InstagramTile = () => {
   return (
-    <Wrapper href="https://www.instagram.com/wassup_paris/">
+    <Tile href="https://www.instagram.com/wassup_paris/">
       <Content>
-        <img src={instagramLogo} />
+        <img src={instagramLogo} alt=""/>
         <p>Follow us on Instagram</p>
       </Content>
-    </Wrapper>
+    </Tile>
   );
 };
 
 export default InstagramTile;
 
-const Wrapper = styled.a`
+const Tile = styled.a`
   position: relative;
   display: block;
   background-color: ${color("white")};
