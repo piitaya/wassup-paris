@@ -1,35 +1,38 @@
 ---
-templateKey: "home-page"
+templateKey: home-page
 title: Wassup Paris
-description: >-
-  Wassup Paris Description
+description: Wassup Paris Description
 intro:
   image:
-    alt: Intro image
+    alt: Wassup intro
     src: /img/intro.jpg
 viewmore:
-  text: Voir plus de Wassup sur Etsy
   image:
     alt: View More
     src: /img/view_more_wassups.jpg
+  text: Voir plus de Wassup sur Etsy
 savoirfaire:
   blocks:
-    - title: Made in France
-      text: >-
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris condimentum enim at mattis volutpat.
-      image: 
+    - image:
         alt: Visu 1
         src: /img/visu_1.jpg
-    - title: Street-Inspired
       text: >-
-        Each wassup is dedicated to our street culture. Just classic shit. Nothing more.
-      image: 
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Mauris condimentum enim at mattis volutpat.
+      title: Made in France
+    - image:
         alt: Visu 2
         src: /img/visu_2.jpg
-    - title: Street-Inspired
       text: >-
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris condimentum enim at mattis volutpat.
-      image: 
+        Each wassup is dedicated to our street culture. Just classic shit.
+        Nothing more.
+      title: Street-Inspired
+    - image:
         alt: Visu 3
         src: /img/visu_3.jpg
+      text: >-
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Mauris condimentum enim at mattis volutpat.
+      title: Street-Inspired
 ---
+
