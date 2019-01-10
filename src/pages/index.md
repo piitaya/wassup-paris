@@ -4,7 +4,7 @@ title: 'Wassup Paris '
 description: 'Wassup Paris Description '
 intro:
   image:
-    alt: Le bois du turfu
+    alt: 'Le bois du turfu '
     src: /img/intro.jpg
 viewmore:
   image:
