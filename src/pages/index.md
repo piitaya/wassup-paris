@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 title: 'Wassup Paris '
-description: Wassup Paris Description
+description: 'Wassup Paris Description '
 intro:
   image:
     alt: Le bois du turfu
