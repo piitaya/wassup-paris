@@ -1,6 +1,6 @@
 ---
 templateKey: home-page
-title: Wassup Paris
+title: 'Wassup Paris '
 description: Wassup Paris Description
 intro:
   image:
