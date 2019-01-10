@@ -34,5 +34,13 @@ savoirfaire:
         src: /img/visu_3.jpg
       text: "On lache toute l'huile de coude que l'on a pour concevoir de la tête jusqu'au pied chaque Wassup. Une passion et un goût prononcé pour la perfection. Plus besoin d'aller Go-muscu. \U0001F4AA"
       title: 'Du bois, du cuir et une pointe d''huile de coude'
+    - image:
+        alt: Visu 3
+        src: /img/visu_3.jpg
+      text: >-
+        T'as capté la ref ? Designés à Paname puis assemblés à Lille nos Wassups
+        sont 100% fait maison. Et vu qu'on te bichonne comme jamais : livraison
+        gratuite en france ✌️
+      title: '"C''est fait maison, bête de session, v''la Kitano"'
 ---
 
