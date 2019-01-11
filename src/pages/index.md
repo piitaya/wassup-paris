@@ -5,7 +5,7 @@ description: 'Wassup Paris Description '
 intro:
   image:
     alt: 'Le bois du turfu '
-    src: /img/intro.jpg
+    src: /img/original_wesh_1.png
 viewmore:
   image:
     alt: Rejoins la clique sur Insta
