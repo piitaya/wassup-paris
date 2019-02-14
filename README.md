@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0af7b243-5388-45b1-98c3-1cc1d5790b02/deploy-status)](https://app.netlify.com/sites/wassup-paris/deploys)
+
 # Gatsby + Netlify CMS Starter
 
 **Note:** This starter uses the [Gatsby v2 Beta](https://www.gatsbyjs.org/blog/2018-06-16-announcing-gatsby-v2-beta-launch/).
