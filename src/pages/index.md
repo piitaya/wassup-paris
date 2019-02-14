@@ -36,7 +36,7 @@ savoirfaire:
       title: 'Du bois, du cuir et une pointe d''huile de coude'
     - image:
         alt: Visu 3
-        src: /img/visu_3.jpg
+        src: /img/visu_4.jpg
       text: >-
         T'as capté la ref ? Designés à Paname puis assemblés à Lille nos Wassups
         sont 100% fait maison. Et vu qu'on te bichonne comme jamais : livraison
